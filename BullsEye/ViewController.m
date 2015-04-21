@@ -10,27 +10,38 @@
 
 @interface ViewController ()
 
+@property (nonatomic) int currentValue;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.currentValue = 50;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)showAlert:(id)sender {
+- (IBAction)showAlert
+{
+    NSString *message = [NSString stringWithFormat:@"The value of slider is %d", self.currentValue];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hello wolrd"
-                                                        message:@"my first app"
+                                                        message:message
                                                        delegate:nil
                                               cancelButtonTitle:@"Awesome"
                                               otherButtonTitles:nil];
     [alertView show];
+}
+
+- (IBAction)sliderMoved:(UISlider *)slider
+{
+    self.currentValue = roundf(slider.value);
 }
 
 @end
