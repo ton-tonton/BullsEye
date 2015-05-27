@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C1DA2D21B1596AE00FDF92A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DA2D11B1596AE00FDF92A /* AboutViewController.m */; };
 		1CA5A4D61AE633A500BF1093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5A4D51AE633A500BF1093 /* main.m */; };
 		1CA5A4D91AE633A500BF1093 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5A4D81AE633A500BF1093 /* AppDelegate.m */; };
 		1CA5A4DC1AE633A500BF1093 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5A4DB1AE633A500BF1093 /* ViewController.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C1DA2D01B1596AE00FDF92A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		1C1DA2D11B1596AE00FDF92A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		1CA5A4D01AE633A500BF1093 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA5A4D41AE633A500BF1093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CA5A4D51AE633A500BF1093 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				1CA5A4D81AE633A500BF1093 /* AppDelegate.m */,
 				1CA5A4DA1AE633A500BF1093 /* ViewController.h */,
 				1CA5A4DB1AE633A500BF1093 /* ViewController.m */,
+				1C1DA2D01B1596AE00FDF92A /* AboutViewController.h */,
+				1C1DA2D11B1596AE00FDF92A /* AboutViewController.m */,
 				1CA5A4DD1AE633A500BF1093 /* Main.storyboard */,
 				1CA5A4E01AE633A500BF1093 /* Images.xcassets */,
 				1CA5A4E21AE633A500BF1093 /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				1CA5A4DC1AE633A500BF1093 /* ViewController.m in Sources */,
 				1CA5A4D91AE633A500BF1093 /* AppDelegate.m in Sources */,
+				1C1DA2D21B1596AE00FDF92A /* AboutViewController.m in Sources */,
 				1CA5A4D61AE633A500BF1093 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +422,7 @@
 				1CA5A4F51AE633A500BF1093 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CA5A4F61AE633A500BF1093 /* Build configuration list for PBXNativeTarget "BullsEyeTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				1CA5A4F81AE633A500BF1093 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
