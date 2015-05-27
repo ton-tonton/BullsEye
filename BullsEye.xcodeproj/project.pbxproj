@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C1DA2D21B1596AE00FDF92A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1DA2D11B1596AE00FDF92A /* AboutViewController.m */; };
+		1C1DA2D41B15B7C100FDF92A /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 1C1DA2D31B15B7C100FDF92A /* BullsEye.html */; };
 		1CA5A4D61AE633A500BF1093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5A4D51AE633A500BF1093 /* main.m */; };
 		1CA5A4D91AE633A500BF1093 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5A4D81AE633A500BF1093 /* AppDelegate.m */; };
 		1CA5A4DC1AE633A500BF1093 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA5A4DB1AE633A500BF1093 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		1C1DA2D01B1596AE00FDF92A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		1C1DA2D11B1596AE00FDF92A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		1C1DA2D31B15B7C100FDF92A /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 		1CA5A4D01AE633A500BF1093 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA5A4D41AE633A500BF1093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CA5A4D51AE633A500BF1093 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C1DA2D51B15B96700FDF92A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1C1DA2D31B15B7C100FDF92A /* BullsEye.html */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		1CA5A4C71AE633A500BF1093 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		1CA5A4D21AE633A500BF1093 /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
+				1C1DA2D51B15B96700FDF92A /* Resource */,
 				1CA5A4D71AE633A500BF1093 /* AppDelegate.h */,
 				1CA5A4D81AE633A500BF1093 /* AppDelegate.m */,
 				1CA5A4DA1AE633A500BF1093 /* ViewController.h */,
@@ -205,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CA5A4DF1AE633A500BF1093 /* Main.storyboard in Resources */,
+				1C1DA2D41B15B7C100FDF92A /* BullsEye.html in Resources */,
 				1CA5A4E41AE633A500BF1093 /* LaunchScreen.xib in Resources */,
 				1CA5A4E11AE633A500BF1093 /* Images.xcassets in Resources */,
 			);
