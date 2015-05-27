@@ -63,17 +63,23 @@
     NSString *message = [NSString stringWithFormat:@"your score is %d", point];
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                         message:message
-                                                       delegate:nil
+                                                       delegate:self
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
     [alertView show];
-    [self startNewRound];
-    [self updateLabels];
 }
 
 - (IBAction)sliderMoved:(UISlider *)slider
 {
     self.currentValue = roundf(slider.value);
+}
+
+#pragma mark - alert delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    [self startNewRound];
+    [self updateLabels];
 }
 
 #pragma mark - function
