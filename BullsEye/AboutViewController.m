@@ -24,6 +24,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 #pragma mark - action
 
 - (IBAction)close:(id)sender

@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     
+    [self initialCustomSlider];
     [self startNewGame];
     [self updateLabels];
 }
@@ -36,6 +37,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 #pragma mark - action
@@ -109,6 +115,21 @@
     self.targetLabel.text = [NSString stringWithFormat:@"%d", self.targetValue];
     self.scoreLabel.text = [NSString stringWithFormat:@"%d", self.score];
     self.roundLabel.text = [NSString stringWithFormat:@"%d", self.round];
+}
+
+- (void) initialCustomSlider
+{
+    UIImage *thumbImageNormal = [UIImage imageNamed:@"SliderThumb-Normal"];
+    UIImage *thumbImageHighlighted = [UIImage imageNamed:@"SliderThumb-Highlighted"];
+    UIImage *trackLeftImage = [[UIImage imageNamed:@"SliderTrackLeft"]
+                               resizableImageWithCapInsets:UIEdgeInsetsMake(0, 14, 0, 14)];
+    UIImage *trackRightImage = [[UIImage imageNamed:@"SliderTrackRight"]
+                                resizableImageWithCapInsets:UIEdgeInsetsMake(0, 14, 0, 14)];
+    
+    [self.slider setThumbImage:thumbImageNormal forState:UIControlStateNormal];
+    [self.slider setThumbImage:thumbImageHighlighted forState:UIControlStateHighlighted];
+    [self.slider setMinimumTrackImage:trackLeftImage forState:UIControlStateNormal];
+    [self.slider setMaximumTrackImage:trackRightImage forState:UIControlStateNormal];
 }
 
 @end
