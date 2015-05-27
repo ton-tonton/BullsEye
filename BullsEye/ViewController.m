@@ -28,9 +28,7 @@
 {
     [super viewDidLoad];
     
-    self.score = 0;
-    self.round = 0;
-    [self startNewRound];
+    [self startNewGame];
     [self updateLabels];
 }
 
@@ -74,6 +72,13 @@
     self.currentValue = roundf(slider.value);
 }
 
+- (IBAction)startOver:(id)sender
+{
+    [self startNewGame];
+    [self updateLabels];
+}
+
+
 #pragma mark - alert delegate
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
@@ -83,6 +88,13 @@
 }
 
 #pragma mark - function
+
+- (void)startNewGame
+{
+    self.score = 0;
+    self.round = 0;
+    [self startNewRound];
+}
 
 - (void)startNewRound
 {
