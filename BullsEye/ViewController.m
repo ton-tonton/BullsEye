@@ -17,6 +17,8 @@
 
 @property (nonatomic) int currentValue;
 @property (nonatomic) int targetValue;
+@property (nonatomic) int score;
+@property (nonatomic) int round;
 
 @end
 
@@ -25,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.score = 0;
+    self.round = 0;
     [self startNewRound];
     [self updateLabels];
 }
@@ -39,8 +44,24 @@
 
 - (IBAction)showAlert
 {
-    NSString *message = [NSString stringWithFormat:@"The value of slider is %d", self.currentValue];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hello wolrd"
+    int diff = abs(self.targetValue - self.currentValue);
+    int point = 100 - diff;
+    self.score += point;
+    
+    NSString *title;
+    
+    if (diff == 0) {
+        title = @"God eye!";
+    } else if (diff < 5) {
+        title = @"You almost had it!";
+    } else if (diff < 10) {
+        title = @"Pretty good!";
+    } else {
+        title = @"Woo, Noob!";
+    }
+    
+    NSString *message = [NSString stringWithFormat:@"your score is %d", point];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                         message:message
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
@@ -59,6 +80,7 @@
 
 - (void)startNewRound
 {
+    self.round += 1;
     self.currentValue = 50;
     self.slider.value = self.currentValue;
     self.targetValue = 1 + arc4random_uniform(100);
@@ -67,6 +89,8 @@
 - (void)updateLabels
 {
     self.targetLabel.text = [NSString stringWithFormat:@"%d", self.targetValue];
+    self.scoreLabel.text = [NSString stringWithFormat:@"%d", self.score];
+    self.roundLabel.text = [NSString stringWithFormat:@"%d", self.round];
 }
 
 @end
